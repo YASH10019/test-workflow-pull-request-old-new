@@ -41,7 +41,7 @@ jobs:
         run: |
           echo "Hello, world!" > txt.txt
 
-      - name: Make some changes in the current repository.
+      - name: Commiting and pushing the made changes in the repository.
         uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
         with:
           # The arguments for the `git add` command (see the paragraph below for more info)
@@ -113,3 +113,7 @@ jobs:
           # Arguments for the git push --tags command (any additional argument will be added after --tags)
           # Default: ''
           tag_push: "--force"
+
+      - name: Pushing Changes to the remote repository.
+        run: |
+          git push origin main 
